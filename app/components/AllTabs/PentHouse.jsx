@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import pent from "../../../public/pent.jpg";
+import pent from "../../../public/Pent.jpg";
 import { Play } from "next/font/google";
 
 const play = Play({ subsets: ["latin"], weight: "400", display: "swap" });
