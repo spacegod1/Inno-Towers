@@ -23,7 +23,7 @@ export default function DoubleRoom() {
           office space, along with a modern living area, this apartment is
           designed to accommodate your dynamic lifestyle with ease.
         </p>
-        <h1 className={`mt-12 ${play.className}`}>FROM $285,000 **</h1>
+        <h1 className={`mt-12 ${play.className}`}>FROM $245,000 **</h1>
         <small>8 available units</small>
       </div>
     </div>

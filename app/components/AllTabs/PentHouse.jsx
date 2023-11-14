@@ -22,7 +22,7 @@ export default function PentHouse() {
           area, and embrace the allure of a private terrace offering a panoramic
           view of the Burma Hills.
         </p>
-        <h1 className={`mt-12 ${play.className}`}>FROM $299,000 **</h1>
+        <h1 className={`mt-12 ${play.className}`}>FROM $600,000 **</h1>
         <small>1 available unit</small>
       </div>
     </div>
