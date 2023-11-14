@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+  background-color: #bc9142;
+  position: sticky;
+  transition: ease-in-out;
+  transition-duration: 300;
+}
+
+.background {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../public/Inno_Towers_left.jpg");
+  background-position: 44% 38%;
+  background-size: cover;
+}
+
+.active-tab {
+  color: #176b87;
+  border-bottom-color: #176b87;
+}
+
+/* #176B87 */
+/* #393646 */
