@@ -10,7 +10,7 @@ const montserrat = Montserrat({
 export default function Home() {
   return (
     <main>
-      <div className="w-full h-[100%] background -z-10">
+      <div className="w-full h-[100dvh] background -z-10">
         <section className="text-white text-center absolute top-[55%] left-0 gap-4 flex flex-col justify-center items-center md:left-[7%] lg:left-[14%]">
           <h2 className="text-3xl lg:text-6xl font-black">
             Experience Luxury Like Never Before
