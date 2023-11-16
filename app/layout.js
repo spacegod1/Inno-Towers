@@ -9,10 +9,6 @@ export const metadata = {
   description: "Luxury in the heart of Tse Addo",
 };
 
-export const viewport = {
-  viewportFit: "cover",
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
