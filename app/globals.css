@@ -21,5 +21,12 @@
   border-bottom-color: #176b87;
 }
 
+.hero-bg {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../public/Inno_Towers_carpark.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
 /* #176B87 */
 /* #393646 */

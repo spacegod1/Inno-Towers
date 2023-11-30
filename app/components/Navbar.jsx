@@ -23,7 +23,7 @@ export default function Navbar() {
   const links = [
     { href: "/", label: "Home" },
     { href: "/apartments", label: "Apartments" },
-    { href: "/features", label: "Features" },
+    { href: "/amenities", label: "Amenities" },
     { href: "/contact_us", label: "Contact Us" },
   ];
 
