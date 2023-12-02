@@ -1,18 +1,17 @@
+"use client";
+
 import { EB_Garamond, Nunito_Sans } from "next/font/google";
-import { LiaSwimmingPoolSolid } from "react-icons/lia";
-import { FaCar } from "react-icons/fa";
-import {
-  MdSecurity,
-  MdOutlineElectricalServices,
-  MdLocalLaundryService,
-  MdCable,
-} from "react-icons/md";
-import { GiLift } from "react-icons/gi";
 
 const eb_garamond = EB_Garamond({
   subsets: ["latin"],
   weight: "500",
   style: "italic",
+  display: "swap",
+});
+
+const nunito_sans_bold = Nunito_Sans({
+  subsets: ["latin"],
+  weight: "800",
   display: "swap",
 });
 
@@ -34,6 +33,19 @@ export default function Amenities() {
           your residence, thus bringing convienience and comfort to your
           fingertips.
         </p>
+      </div>
+      <div className="mt-7 md:mt-[80px] mx-8 flex flex-col gap-7 md:flex-row">
+        <hr className="w-[96%] md:w-[250px] mt-5 gold_color"></hr>
+        <div className="md:mr-[14rem] md:ml-5">
+          <h3 className={`${nunito_sans_bold.className} text-2xl`}>
+            Facilities & Services
+          </h3>
+          <p className="mt-3">
+            Explore the comprehensive amenities that make life in Inno Towers
+            Complex seamless, allowing you to focus on what truly matters –
+            enjoying the essence of home.{" "}
+          </p>
+        </div>
       </div>
     </section>
   );
