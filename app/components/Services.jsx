@@ -34,7 +34,7 @@ export default function Services() {
         </p>
       </div>
       <div className="w-[27rem]">
-        <LiaSwimmingPoolSolid size={27} className="text-[#bc9142]" />
+        <LiaSwimmingPoolSolid size={30} className="text-[#bc9142]" />
         <h3 className="text-[1.125rem] font-medium mb-2">Swimming Pool</h3>
         <p>
           Dive into a world of relaxation and socialization in our inviting pool
@@ -51,7 +51,7 @@ export default function Services() {
         </p>
       </div>
       <div className="w-[27rem]">
-        <MdOutlineElectricalServices size={27} className="text-[#bc9142]" />
+        <MdOutlineElectricalServices size={30} className="text-[#bc9142]" />
         <h3 className="text-[1.125rem] font-medium mb-2">Backup Utilities</h3>
         <p className="text-justify">
           We understand that continuity is key, which is why our complex is
