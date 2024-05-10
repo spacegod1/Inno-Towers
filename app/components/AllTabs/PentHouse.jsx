@@ -3,8 +3,14 @@
 import Image from "next/image";
 import pent from "../../../public/Pent.jpg";
 import { Play } from "next/font/google";
+import { EB_Garamond } from "next/font/google";
 
 const play = Play({ subsets: ["latin"], weight: "400", display: "swap" });
+const eb_garamond = EB_Garamond({
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+});
 
 export default function PentHouse() {
   return (
@@ -16,7 +22,7 @@ export default function PentHouse() {
         height={800}
       />
       <div className="flex flex-col justify-center mx-2 lg:mx-[5rem] text-[1.3rem] leading-8">
-        <p>
+        <p className={`${eb_garamond.className}`}>
           Ascend to unparalleled luxury in our flagship penthouse suite. Revel
           in a generously spacious master bedroom, unwind in the chic living
           area, and embrace the allure of a private terrace offering a panoramic

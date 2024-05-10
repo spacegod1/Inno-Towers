@@ -3,8 +3,14 @@
 import Image from "next/image";
 import twobedroom from "../../../public/double.jpg";
 import { Play } from "next/font/google";
+import { EB_Garamond } from "next/font/google";
 
 const play = Play({ subsets: ["latin"], weight: "400", display: "swap" });
+const eb_garamond = EB_Garamond({
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+});
 
 export default function DoubleRoom() {
   return (
@@ -16,7 +22,7 @@ export default function DoubleRoom() {
         height={670}
       />
       <div className="flex flex-col justify-center mx-2 lg:mx-[5rem] text-[1.3rem] leading-8">
-        <p>
+        <p className={`${eb_garamond.className}`}>
           Discover the perfect balance of space and versatility, ideal for small
           families or individuals seeking functionality. With two comfortable en
           suite bedrooms, offering flexibility for a cozy home and a productive

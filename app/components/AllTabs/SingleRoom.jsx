@@ -3,8 +3,14 @@
 import Image from "next/image";
 import onebedroom from "../../../public/single.jpg";
 import { Play } from "next/font/google";
+import { EB_Garamond } from "next/font/google";
 
 const play = Play({ subsets: ["latin"], weight: "400", display: "swap" });
+const eb_garamond = EB_Garamond({
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+});
 
 export default function SingleRoom() {
   return (
@@ -16,7 +22,7 @@ export default function SingleRoom() {
         height={670}
       />
       <div className="flex flex-col justify-center mx-2 lg:mx-[5rem] text-[1.3rem] leading-8">
-        <p>
+        <p className={`${eb_garamond.className}`}>
           Compact elegance meets urban comfort in our single bedroom haven. With
           a cozy 17m² living space, a modern washroom, and a welcoming lobby,
           this is where city living feels just right. Welcome home to efficiency
