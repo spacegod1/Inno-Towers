@@ -1,17 +1,4 @@
-import { EB_Garamond, Nunito_Sans } from "next/font/google";
-
-const eb_garamond = EB_Garamond({
-  subsets: ["latin"],
-  weight: "500",
-  style: "italic",
-  display: "swap",
-});
-
-const nunito_sans = Nunito_Sans({
-  subsets: ["latin"],
-  weight: "300",
-  display: "swap",
-});
+import { eb_garamond, nunito_sans } from "../styles/fonts";
 
 export default function Apartments() {
   return (

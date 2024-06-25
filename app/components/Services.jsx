@@ -45,15 +45,3 @@ export default function Services() {
     </section>
   );
 }
-
-{
-  /* <div className="w-[27rem]">
-        <MdLocalLaundryService size={27} className="text-[#bc9142]" />
-        <h3 className="text-[1.125rem] font-medium">Laundry Services</h3>
-        <p>
-          Our professional laundry services ensure your clothes are cared for
-          with the utmost attention, leaving you with more time to enjoy the
-          things that matter.{" "}
-        </p>
-      </div> */
-}

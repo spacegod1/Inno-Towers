@@ -1,29 +1,17 @@
 "use client";
 
-import { EB_Garamond, Nunito_Sans } from "next/font/google";
 import Services from "../components/Services";
-import livingRoom from "../../public/livingArea1.jpg";
+import aerial from "../../public/Tse.jpg";
 import Image from "next/image";
-import Maps from "../components/Maps";
+import Footer from "../components/Footer";
+import {
+  eb_garamond400,
+  eb_garamond,
+  nunito_sans,
+  nunito_sans_bold,
+} from "../styles/fonts";
 
-const eb_garamond = EB_Garamond({
-  subsets: ["latin"],
-  weight: "500",
-  style: "italic",
-  display: "swap",
-});
-
-const nunito_sans_bold = Nunito_Sans({
-  subsets: ["latin"],
-  weight: "800",
-  display: "swap",
-});
-
-const nunito_sans = Nunito_Sans({
-  subsets: ["latin"],
-  weight: "300",
-  display: "swap",
-});
+// import Maps from "../components/Maps";
 
 export default function Amenities() {
   return (
@@ -46,7 +34,7 @@ export default function Amenities() {
           >
             Facilities & Services
           </h3>
-          <p className="mt-3">
+          <p className={`mt-3 text-[1.1rem] ${eb_garamond400.className}`}>
             Explore the comprehensive amenities that make living at Inno Towers
             ideal, allowing you to focus on what truly matters – enjoying the
             essence of home. We provide our residents exclusive access to :
@@ -60,19 +48,39 @@ export default function Amenities() {
         >
           A Superior Locale
         </p>
-        <div className="flex flex-col md:flex-row my-6 mx-[1.2rem] md:mx-[6 rem]">
-          <div className="flex flex-col gap-3 w-auto md:w-[30rem]">
+        <div
+          className={`${eb_garamond400.className} text-[1.2rem] flex flex-col pl-0 md:pl-6 gap-16 md:flex-row mt-8 mb-11 mx-[1.2rem] md:mx-[6rem]`}
+        >
+          <div className="flex flex-col gap-3 w-auto md:w-[36rem]">
             <p>
               Inno Towers is strategically located in the serene and secure
               environs of Burma Hills, a classy residential community of
               affluent individuals, beautiful houses and well demarcated road
               layouts.
             </p>
-            <Image src={livingRoom} alt="image of apartment" />
+            <Image src={aerial} alt="aerial view of Tse Addo" />
           </div>
-          {/* <Maps /> */}
+          <div className="w-auto md:w-[36rem]">
+            <p className="mb-8">
+              We assure our residents that Inno Towers is also one of the most
+              secure places in Accra, as it is in close proximity to the Burma
+              Camp Military Post of the Ghanaian Armed Forces. Residents would
+              benefit from well installed Security measures and regular police
+              patrols. The quality of roads, proximity to renowned malls, the
+              Kotoka International Airport, and the central business district
+              makes it most preferred.
+            </p>
+            <p>
+              Along the main roads, residents have access to a range of
+              amenities such as bars, restaurants, grocery stores, pharmacies,
+              clothing boutiques, and beauty shops. The neighborhood also offers
+              excellent educational institutions, healthcare facilities,
+              churches, banks, and even a university, Zenith College.
+            </p>
+          </div>
         </div>
       </div>
+      <Footer />
     </section>
   );
 }
