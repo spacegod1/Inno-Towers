@@ -62,13 +62,13 @@ export default function Amenities() {
           </div>
           <div className="w-auto md:w-[36rem]">
             <p className="mb-8">
-              We assure our residents that Inno Towers is also one of the most
-              secure places in Accra, as it is in close proximity to the Burma
-              Camp Military Post of the Ghanaian Armed Forces. Residents would
-              benefit from well installed Security measures and regular police
-              patrols. The quality of roads, proximity to renowned malls, the
-              Kotoka International Airport, and the central business district
-              makes it most preferred.
+              We assure our residents that Inno Towers is situated in one of the
+              most secure places in Accra, as it is in close proximity to the
+              Burma Camp Military Post of the Ghanaian Armed Forces. Residents
+              would benefit from well installed Security measures and regular
+              police patrols. The quality of roads, proximity to renowned malls,
+              the Kotoka International Airport, and the central business
+              district makes it most preferred.
             </p>
             <p>
               Along the main roads, residents have access to a range of
