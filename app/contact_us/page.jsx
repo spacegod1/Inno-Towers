@@ -12,7 +12,7 @@ export default function Contact() {
           <h2
             className={`inline text-[1.58rem] md:text-4xl ${eb_garamond.className}`}
           >
-            Talk to Us - We Dont Bite!
+            Always Ready to Assist You
           </h2>
           <p className={`${eb_garamond400.className} text-[1.2rem] mt-5`}>
             Whether you want a property viewing session or just want general
