@@ -64,8 +64,8 @@ export default function Amenities() {
             <p className="mb-8">
               We assure our residents that Inno Towers is situated in one of the
               most secure places in Accra, as it is in close proximity to the
-              Burma Camp Military Post of the Ghanaian Armed Forces. Residents
-              would benefit from well installed Security measures and regular
+              Burma Camp Military post of the Ghana Armed Forces. Residents
+              would benefit from well installed security measures and regular
               police patrols. The quality of roads, proximity to renowned malls,
               the Kotoka International Airport, and the central business
               district makes it most preferred.

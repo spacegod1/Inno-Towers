@@ -19,7 +19,7 @@ export default function DoubleRoom() {
         src={twobedroom}
         alt="Plan for 2 - bedroom"
         width={600}
-        height={670}
+        className="h-[30rem]"
       />
       <div className="flex flex-col justify-center mx-2 lg:mx-[5rem] text-[1.3rem] leading-8">
         <p className={`${eb_garamond.className}`}>
@@ -29,8 +29,8 @@ export default function DoubleRoom() {
           office space, along with a modern living area, this apartment is
           designed to accommodate your dynamic lifestyle with ease.
         </p>
-        <h1 className={`mt-12 ${play.className}`}>FROM $245,000 **</h1>
-        <small>8 available units</small>
+        <h1 className={`mt-12 ${play.className}`}>FROM $199,000 **</h1>
+        <small>10 available units</small>
       </div>
     </div>
   );

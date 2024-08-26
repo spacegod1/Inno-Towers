@@ -19,13 +19,13 @@ const nunito_sans = Nunito_Sans({
 
 export default function ApartmentNav() {
   const list = [
-    { roomType: "1 - bedroom apartment", selectedTab: "tab1" },
+    { roomType: "Studio apartment", selectedTab: "tab1" },
     { roomType: "2 - bedroom apartment", selectedTab: "tab2" },
     { roomType: "Penthouse Suite", selectedTab: "tab3" },
   ];
 
   const listMobile = [
-    { roomType: "Single", selectedTab: "tab1" },
+    { roomType: "Studio", selectedTab: "tab1" },
     { roomType: "Double", selectedTab: "tab2" },
     { roomType: "Pent", selectedTab: "tab3" },
   ];
@@ -76,7 +76,7 @@ export default function ApartmentNav() {
         </ul>
       </nav>
       <div
-        className={`outlet p-2 mt-5 md:p-10 md:mx-10 ${nunito_sans.className}`}
+        className={`outlet p-2 mt-5 md:p-6 md:mx-10 ${nunito_sans.className}`}
       >
         {activeTab === "tab1" && <SingleRoom />}
         {activeTab === "tab2" && <DoubleRoom />}
