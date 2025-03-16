@@ -21,9 +21,9 @@ export default function Amenities() {
           You Can Have It All Here
         </p>
         <p className={`${nunito_sans.className}`}>
-          Our commitment to exceptional living extends beyond the confines of
-          your residence, thus bringing convenience and comfort to your
-          doorsteps.
+          We believe great living {`doesn't`} stop at your front door. {`That's why we've `} 
+          created amazing spaces and services right at your doorstep, making everyday 
+          life more enjoyable and convenient.
         </p>
       </div>
       <div className="mt-7 md:mt-[80px] mx-8 flex flex-col gap-7 md:flex-row">

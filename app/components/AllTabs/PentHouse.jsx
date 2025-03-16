@@ -1,9 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import pent from "../../../public/Pent.png";
+import pent1 from "../../../public/Pent1.jpg";
+import pent2 from "../../../public/Pent2.jpg";
 import { Play } from "next/font/google";
 import { EB_Garamond } from "next/font/google";
+import { useState } from "react";
 
 const play = Play({ subsets: ["latin"], weight: "400", display: "swap" });
 const eb_garamond = EB_Garamond({
@@ -13,23 +15,88 @@ const eb_garamond = EB_Garamond({
 });
 
 export default function PentHouse() {
+  const [currentFloor, setCurrentFloor] = useState(0);
+  
+  const floors = [
+    { image: pent1, title: "4th Floor - Main Living Area" },
+    { image: pent2, title: "5th Floor - Private Rooftop Terrace" }
+  ];
+
+  const nextFloor = () => {
+    setCurrentFloor((prev) => (prev === 1 ? 0 : 1));
+  };
+
+  const prevFloor = () => {
+    setCurrentFloor((prev) => (prev === 0 ? 1 : 0));
+  };
+
   return (
-    <div className="flex gap-8 flex-col lg:flex-row lg:ml-9">
-      <Image
-        src={pent}
-        alt="Plan for PentHouse Suite"
-        width={600}
-        className="h-[30rem]"
-      />
-      <div className="flex flex-col justify-center mx-2 lg:mx-[4rem] text-[1.3rem] leading-8">
-        <p className={`${eb_garamond.className}`}>
-          Ascend to unparalleled luxury in our flagship penthouse suite. Revel
-          in a generously spacious master bedroom, unwind in the chic living
-          area, and embrace the allure of a private terrace offering a panoramic
-          view of the Burma Hills.
+    <div className="max-w-[1400px] mx-auto px-4">
+      {/* Carousel Container */}
+      <div className="relative mb-8">
+        <div className="relative w-full overflow-hidden rounded-lg shadow-lg bg-gray-100">
+          <Image
+            src={floors[currentFloor].image}
+            alt={`Penthouse ${floors[currentFloor].title}`}
+            width={1400}
+            height={1000}
+            className="w-full h-full object-contain max-h-[800px]"
+            priority
+          />
+          
+          {/* Floor Indicator */}
+          <div className="absolute top-4 left-4 bg-black/70 text-white px-4 py-2 rounded-full text-sm">
+            {floors[currentFloor].title}
+          </div>
+
+          {/* Navigation Buttons */}
+          <button
+            onClick={prevFloor}
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 backdrop-blur-sm hover:bg-black/50 text-white w-8 h-8 
+            lg:w-12 lg:h-12 rounded-full transition-all flex items-center justify-center border border-white/30 text-sm lg:text-base"
+          >
+            ←
+          </button>
+          <button
+            onClick={nextFloor}
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 backdrop-blur-sm hover:bg-black/50 text-white w-8 h-8 
+            lg:w-12 lg:h-12 rounded-full transition-all flex items-center justify-center border border-white/30 text-sm lg:text-base"
+          >
+            →
+          </button>
+
+          {/* Dots Indicator */}
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+            {[0, 1].map((index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentFloor(index)}
+                className={`w-2 h-2 rounded-full transition-all ${
+                  currentFloor === index ? "bg-white" : "bg-white/50"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Content Container */}
+      <div className="max-w-3xl mx-auto text-center">
+        <p className={`${eb_garamond.className} text-xl leading-relaxed mb-8`}>
+          Experience the pinnacle of luxury living in our stunning two-story penthouse. 
+          The 4th floor welcomes you with a magnificent master suite, elegant living spaces, 
+          and a gourmet kitchen. Ascend to your private 5th-floor retreat, featuring an 
+          exclusive rooftop terrace with breathtaking views of Burma Hills, perfect for 
+          entertaining or peaceful relaxation under the stars.
         </p>
-        <h1 className={`mt-12 ${play.className}`}>FROM $600,000 **</h1>
-        <small>1 available unit</small>
+
+        {/* Price and Availability Card */}
+        <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-gray-100">
+          <h1 className={`${play.className} text-3xl mb-2`}>FROM $500,000 **</h1>
+          <span className="inline-block px-4 py-1 bg-gray-100 rounded-full text-sm">
+            1 available unit
+          </span>
+        </div>
       </div>
     </div>
   );

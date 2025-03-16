@@ -10,10 +10,7 @@
 }
 
 .background {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("../public/Inno_Towers_left.jpg");
-  background-position: 44% 38%;
-  background-size: cover;
+  background-position: 44% 50%;
 }
 
 .active-tab {
@@ -25,7 +22,7 @@
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("../public/Inno_Towers_carpark.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: 70% 65%;
 }
 
 .gold_color {

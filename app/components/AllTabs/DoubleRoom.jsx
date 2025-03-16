@@ -14,23 +14,47 @@ const eb_garamond = EB_Garamond({
 
 export default function DoubleRoom() {
   return (
-    <div className="flex gap-8 flex-col lg:flex-row lg:ml-9">
-      <Image
-        src={twobedroom}
-        alt="Plan for 2 - bedroom"
-        width={600}
-        className="h-[30rem]"
-      />
-      <div className="flex flex-col justify-center mx-2 lg:mx-[5rem] text-[1.3rem] leading-8">
-        <p className={`${eb_garamond.className}`}>
-          Discover the perfect balance of space and versatility, ideal for small
-          families or individuals seeking functionality. With two comfortable en
-          suite bedrooms, offering flexibility for a cozy home and a productive
-          office space, along with a modern living area, this apartment is
-          designed to accommodate your dynamic lifestyle with ease.
+    <div className="max-w-[1400px] mx-auto px-4">
+      {/* Image Container */}
+      <div className="mb-8">
+        <Image
+          src={twobedroom}
+          alt="Plan for 2 - bedroom"
+          width={1400}
+          className="w-full h-auto object-contain shadow-lg rounded-lg"
+          priority
+        />
+      </div>
+
+      {/* Content Container */}
+      <div className="max-w-3xl mx-auto text-center">
+        <p className={`${eb_garamond.className} text-xl leading-relaxed mb-8`}>
+          Our two-bedroom apartments come in two thoughtfully designed layouts to match your needs. 
+          Type A offers a more spacious setting with a standalone kitchen - perfect for those who love 
+          to cook and entertain. Type B features a smart, compact design that makes excellent use of 
+          space while maintaining all the comforts of a two-bedroom home. Both options include two 
+          cozy en-suite bedrooms and modern living spaces that adapt perfectly to your lifestyle, 
+          whether {`you're`} working from home or enjoying family time.
         </p>
-        <h1 className={`mt-12 ${play.className}`}>FROM $199,000 **</h1>
-        <small>10 available units</small>
+
+        {/* Price and Availability Cards */}
+        <div className="flex justify-center gap-6 flex-wrap">
+          <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-gray-100">
+            <h2 className="text-lg mb-2">Type A - Spacious Layout</h2>
+            <h1 className={`${play.className} text-3xl mb-2`}>FROM $189,000 **</h1>
+            <span className="inline-block px-4 py-1 bg-gray-100 rounded-full text-sm">
+              3 available units
+            </span>
+          </div>
+
+          <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-gray-100">
+            <h2 className="text-lg mb-2">Type B - Compact Layout</h2>
+            <h1 className={`${play.className} text-3xl mb-2`}>FROM $149,000 **</h1>
+            <span className="inline-block px-4 py-1 bg-gray-100 rounded-full text-sm">
+              5 available units
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   );
