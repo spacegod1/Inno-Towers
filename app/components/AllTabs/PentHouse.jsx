@@ -45,7 +45,7 @@ export default function PentHouse() {
           />
           
           {/* Floor Indicator */}
-          <div className="absolute top-4 left-4 bg-black/70 text-white px-4 py-2 rounded-full text-sm">
+          <div className="absolute top-4 left-4 bg-black/70 text-white px-4 py-2 rounded-full text-sm hidden md:block">
             {floors[currentFloor].title}
           </div>
 
