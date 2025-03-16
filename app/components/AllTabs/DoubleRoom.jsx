@@ -4,6 +4,8 @@ import Image from "next/image";
 import twobedroom from "../../../public/double.jpg";
 import { Play } from "next/font/google";
 import { EB_Garamond } from "next/font/google";
+import ImageModal from '../ImageModal';
+import { useState } from "react";
 
 const play = Play({ subsets: ["latin"], weight: "400", display: "swap" });
 const eb_garamond = EB_Garamond({
@@ -13,18 +15,42 @@ const eb_garamond = EB_Garamond({
 });
 
 export default function DoubleRoom() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="max-w-[1400px] mx-auto px-4">
       {/* Image Container */}
       <div className="mb-8">
-        <Image
-          src={twobedroom}
-          alt="Plan for 2 - bedroom"
-          width={1400}
-          className="w-full h-auto object-contain shadow-lg rounded-lg"
-          priority
-        />
+        <div className="relative">
+          <div 
+            className="md:cursor-default"
+            onClick={() => window.innerWidth < 768 && setIsModalOpen(true)}
+          >
+            <Image
+              src={twobedroom}
+              alt="Plan for 2 - bedroom"
+              width={1400}
+              className="w-full h-auto object-contain shadow-lg rounded-lg"
+              priority
+            />
+            {/* Mobile tap indicator */}
+            <div className="absolute bottom-4 right-4 bg-black/70 text-white px-3 py-1.5 rounded-lg text-sm md:hidden flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+              Tap to zoom
+            </div>
+          </div>
+        </div>
       </div>
+
+      {/* Modal */}
+      <ImageModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        imageSrc={twobedroom.src}
+        alt="Plan for 2 - bedroom"
+      />
 
       {/* Content Container */}
       <div className="max-w-3xl mx-auto text-center">

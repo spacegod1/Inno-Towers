@@ -6,6 +6,7 @@ import pent2 from "../../../public/Pent2.jpg";
 import { Play } from "next/font/google";
 import { EB_Garamond } from "next/font/google";
 import { useState } from "react";
+import ImageModal from '../ImageModal';
 
 const play = Play({ subsets: ["latin"], weight: "400", display: "swap" });
 const eb_garamond = EB_Garamond({
@@ -16,6 +17,7 @@ const eb_garamond = EB_Garamond({
 
 export default function PentHouse() {
   const [currentFloor, setCurrentFloor] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   
   const floors = [
     { image: pent1, title: "4th Floor - Main Living Area" },
@@ -35,14 +37,28 @@ export default function PentHouse() {
       {/* Carousel Container */}
       <div className="relative mb-8">
         <div className="relative w-full overflow-hidden rounded-lg shadow-lg bg-gray-100">
-          <Image
-            src={floors[currentFloor].image}
-            alt={`Penthouse ${floors[currentFloor].title}`}
-            width={1400}
-            height={1000}
-            className="w-full h-full object-contain max-h-[800px]"
-            priority
-          />
+          <div className="relative">
+            <div 
+              className="md:cursor-default"
+              onClick={() => window.innerWidth < 768 && setIsModalOpen(true)}
+            >
+              <Image
+                src={floors[currentFloor].image}
+                alt={`Penthouse ${floors[currentFloor].title}`}
+                width={1400}
+                height={1000}
+                className="w-full h-full object-contain max-h-[800px]"
+                priority
+              />
+              {/* Mobile tap indicator */}
+              <div className="absolute bottom-4 right-4 bg-black/70 text-white px-3 py-1.5 rounded-lg text-sm md:hidden flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                Tap to zoom
+              </div>
+            </div>
+          </div>
           
           {/* Floor Indicator */}
           <div className="absolute top-4 left-4 bg-black/70 text-white px-4 py-2 rounded-full text-sm hidden md:block">
@@ -79,6 +95,14 @@ export default function PentHouse() {
           </div>
         </div>
       </div>
+
+      {/* Modal */}
+      <ImageModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        imageSrc={floors[currentFloor].image.src}
+        alt={`Penthouse ${floors[currentFloor].title}`}
+      />
 
       {/* Content Container */}
       <div className="max-w-3xl mx-auto text-center">
