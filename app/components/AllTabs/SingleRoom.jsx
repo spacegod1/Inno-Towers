@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import onebedroom from "../../../public/studio.png";
+import onebedroom from "@/public/studio.png";
 import { Play } from "next/font/google";
 import { EB_Garamond } from "next/font/google";
 

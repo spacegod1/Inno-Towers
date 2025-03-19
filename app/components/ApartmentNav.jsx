@@ -27,7 +27,7 @@ export default function ApartmentNav() {
   const listMobile = [
     { roomType: "Studio", selectedTab: "tab1" },
     { roomType: "Double", selectedTab: "tab2" },
-    { roomType: "Pent", selectedTab: "tab3" },
+    { roomType: "PentHouse", selectedTab: "tab3" },
   ];
 
   const [activeTab, setActiveTab] = useState("tab1");
@@ -39,6 +39,7 @@ export default function ApartmentNav() {
 
         <ul
           className={`flex md:hidden justify-center items-center gap-8 mx-4 mt-6 ${nunito_sans8.className}`}
+          suppressHydrationWarning
         >
           {listMobile.map((item) => {
             return (

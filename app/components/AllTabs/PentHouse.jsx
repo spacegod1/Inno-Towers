@@ -1,11 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import pent1 from "../../../public/Pent1.jpg";
-import pent2 from "../../../public/Pent2.jpg";
-import PentLiving from "../../../public/Inno_towers_livingroom.jpg";
-import PentBedroom from "../../../public/Inno_towers_bedroom.jpg";
-import PentKitchen from "../../../public/Inno_towers_kitchen.jpg";
+import pent1 from "@/public/Pent1.jpg";
+import pent2 from "@/public/Pent2.jpg";
+import PentLiving from "@/public/Inno_Towers_livingroom.jpg";
+import PentBedroom from "@/public/Inno_Towers_bedroom.jpg";
+import PentKitchen from "@/public/Inno_Towers_kitchen.jpg";
 import { Play } from "next/font/google";
 import { EB_Garamond } from "next/font/google";
 import { useState } from "react";
