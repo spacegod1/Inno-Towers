@@ -3,6 +3,9 @@
 import Image from "next/image";
 import pent1 from "../../../public/Pent1.jpg";
 import pent2 from "../../../public/Pent2.jpg";
+import PentLiving from "../../../public/Inno_towers_livingroom.jpg";
+import PentBedroom from "../../../public/Inno_towers_bedroom.jpg";
+import PentKitchen from "../../../public/Inno_towers_kitchen.jpg";
 import { Play } from "next/font/google";
 import { EB_Garamond } from "next/font/google";
 import { useState } from "react";
@@ -21,15 +24,22 @@ export default function PentHouse() {
   
   const floors = [
     { image: pent1, title: "4th Floor - Main Living Area" },
-    { image: pent2, title: "5th Floor - Private Rooftop Terrace" }
+    { image: pent2, title: "5th Floor - Private Rooftop Terrace" },
+    { image: PentLiving, title: "Luxury Living Space" },
+    { image: PentBedroom, title: "Master Bedroom" },
+    { image: PentKitchen, title: "Designer Kitchen" }
   ];
 
   const nextFloor = () => {
-    setCurrentFloor((prev) => (prev === 1 ? 0 : 1));
+    setCurrentFloor((prev) => 
+      prev === floors.length - 1 ? 0 : prev + 1
+    );
   };
 
   const prevFloor = () => {
-    setCurrentFloor((prev) => (prev === 0 ? 1 : 0));
+    setCurrentFloor((prev) => 
+      prev === 0 ? floors.length - 1 : prev - 1
+    );
   };
 
   return (
@@ -83,7 +93,7 @@ export default function PentHouse() {
 
           {/* Dots Indicator */}
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-            {[0, 1].map((index) => (
+            {floors.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentFloor(index)}
