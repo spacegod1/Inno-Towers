@@ -23,7 +23,7 @@ export default function Footer() {
           <CiFacebook size={27} />
         </Link>
       </div>
-      <small>© 2023 Inno Towers Inc.</small>
+      <small>© 2025 Inno Towers Inc.</small>
     </div>
   );
 }
