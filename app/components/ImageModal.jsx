@@ -3,20 +3,20 @@ export default function ImageModal({ isOpen, onClose, imageSrc, alt }) {
 
   return (
     <div 
-      className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+      className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-0"
       onClick={onClose}
     >
-      <div className="relative max-w-[90vw] max-h-[90vh]">
+      <div className="relative w-screen h-screen">
         <button 
           onClick={onClose}
-          className="absolute -top-10 right-0 text-white text-xl p-2"
+          className="absolute top-4 right-4 text-white text-2xl p-2 z-10"
         >
           ✕
         </button>
         <img 
           src={imageSrc} 
           alt={alt} 
-          className="max-w-full max-h-[85vh] object-contain"
+          className="w-screen h-screen object-contain"
         />
       </div>
     </div>
