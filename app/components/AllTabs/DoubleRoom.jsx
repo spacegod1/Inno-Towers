@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import twobedroom from "@/public/double.jpg";
-import typeA from "@/public/Type-A.jpg";
+import typeA from "@/public/Type-A.png";
 import typeB from "@/public/Type-B.png";
 import typeC from "@/public/Type-C.png";
 import { Play } from "next/font/google";
