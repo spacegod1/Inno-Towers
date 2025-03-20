@@ -11,27 +11,66 @@ const cinzel = Cinzel({ subsets: ["latin"], weight: "400", display: "swap" });
 
 export default function Services() {
   return (
-    <section
-      className={`bg-[#F3EEEA] flex flex-wrap justify-center px-9 py-12 gap-6 md:gap-10 mt-14 amenities ${cinzel.className}`}
-    >
-      <div className="w-[25rem]">
-        <ImConnection size={27} className="text-[#bc9142]" />
-        <div>
-          <h3 className="text-[1.3rem] font-medium mb-2">High Speed Wifi</h3>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
+      {/* High Speed Wifi */}
+      <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+        <div className="flex flex-col items-center text-center">
+          <div className="bg-[#F3EEEA] p-4 rounded-full mb-6">
+            <ImConnection size={32} className="text-[#bc9142]" />
+          </div>
+          <h3 className={`${cinzel.className} text-xl font-medium mb-3 text-gray-800`}>
+            High Speed Wifi
+          </h3>
+          <p className="text-gray-600 text-sm">
+            Stay connected with our high-speed fiber optic internet
+          </p>
         </div>
       </div>
-      <div className="w-[25rem]">
-        <MdSecurity size={27} className="text-[#bc9142] mb-1" />
-        <h3 className="text-[1.3rem] font-medium mb-2">24/7 Security & CCTV</h3>
+
+      {/* Security */}
+      <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+        <div className="flex flex-col items-center text-center">
+          <div className="bg-[#F3EEEA] p-4 rounded-full mb-6">
+            <MdSecurity size={32} className="text-[#bc9142]" />
+          </div>
+          <h3 className={`${cinzel.className} text-xl font-medium mb-3 text-gray-800`}>
+            24/7 Security & CCTV
+          </h3>
+          <p className="text-gray-600 text-sm">
+            Round-the-clock security with advanced surveillance systems
+          </p>
+        </div>
       </div>
-      <div className="w-[25rem]">
-        <MdOutlineElectricalServices size={30} className="text-[#bc9142]" />
-        <h3 className="text-[1.3rem] font-medium mb-2">Backup Utilities</h3>
+
+      {/* Backup Utilities */}
+      <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+        <div className="flex flex-col items-center text-center">
+          <div className="bg-[#F3EEEA] p-4 rounded-full mb-6">
+            <MdOutlineElectricalServices size={32} className="text-[#bc9142]" />
+          </div>
+          <h3 className={`${cinzel.className} text-xl font-medium mb-3 text-gray-800`}>
+            Backup Utilities
+          </h3>
+          <p className="text-gray-600 text-sm">
+            Uninterrupted power supply with backup generators
+          </p>
+        </div>
       </div>
-      <div className="w-[25rem]">
-        <GiLift size={27} className="text-[#bc9142]" />
-        <h3 className="text-[1.3rem] font-medium mb-2">Lifts</h3>
+
+      {/* Lifts */}
+      <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+        <div className="flex flex-col items-center text-center">
+          <div className="bg-[#F3EEEA] p-4 rounded-full mb-6">
+            <GiLift size={32} className="text-[#bc9142]" />
+          </div>
+          <h3 className={`${cinzel.className} text-xl font-medium mb-3 text-gray-800`}>
+            Modern Lifts
+          </h3>
+          <p className="text-gray-600 text-sm">
+            High-speed elevators for convenient access
+          </p>
+        </div>
       </div>
-    </section>
+    </div>
   );
 }
