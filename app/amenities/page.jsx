@@ -2,6 +2,9 @@
 
 import Services from "../components/Services";
 import aerial from "../../public/Tse.jpg";
+import front from "../../public/Inno_Towers_pool.jpg";
+import left from "../../public/Inno_Towers_left.jpg";
+import pool from "../../public/Inno_Towers_carpark.jpg";
 import Image from "next/image";
 import Footer from "../components/Footer";
 import {
@@ -18,68 +21,110 @@ export default function Amenities() {
     <section className="mt-[8.7rem]">
       <div className="hero-bg h-[250px] md:h-[470px] text-white flex flex-col ease duration-250 gap-4 justify-center items-center text-center px-6">
         <p className={`${eb_garamond.className} text-[1.58rem] md:text-5xl`}>
-          You Can Have It All Here
+          Luxury Living at Your Doorstep
         </p>
         <p className={`${nunito_sans.className}`}>
-          We believe great living {`doesn't`} stop at your front door. {`That's why we've `} 
-          created amazing spaces and services right at your doorstep, making everyday 
-          life more enjoyable and convenient.
+          Experience the perfect blend of comfort and convenience with our premium amenities
         </p>
       </div>
-      <div className="mt-7 md:mt-[80px] mx-8 flex flex-col gap-7 md:flex-row">
-        <hr className="w-[96%] md:w-[250px] mt-5 gold_color"></hr>
-        <div className="md:mr-[14rem] md:ml-5">
-          <h3
-            className={`${nunito_sans_bold.className} text-2xl text-[#383838]`}
-          >
-            Facilities & Services
-          </h3>
-          <p className={`mt-3 text-[1.1rem] ${eb_garamond400.className}`}>
-            Explore the comprehensive amenities that make living at Inno Towers
-            ideal, allowing you to focus on what truly matters – enjoying the
-            essence of home. We provide our residents exclusive access to :
+      <div className="mt-12 md:mt-20 px-4 md:px-8">
+        <h2 className={`${eb_garamond.className} text-3xl md:text-4xl text-center mb-12`}>
+          Premium Amenities
+        </h2>
+        
+        <div className="mb-16">
+          <div className="flex flex-col md:flex-row gap-8 items-center">
+            <div className="md:w-1/2">
+              <h3 className={`${nunito_sans_bold.className} text-2xl mb-4`}>Infinity Swimming Pool</h3>
+              <p className={`${eb_garamond400.className} text-lg`}>
+                Dive into luxury with our stunning infinity pool overlooking the cityscape. 
+                Perfect for morning laps or evening relaxation, our pool area is designed 
+                to provide a resort-like experience right at home.
+              </p>
+            </div>
+            <div className="md:w-1/2">
+              <Image 
+                src={front} 
+                alt="Inno Towers Front View" 
+                className="rounded-lg shadow-lg"
+                width={600}
+                height={400}
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="mb-16">
+          <div className="flex flex-col-reverse md:flex-row gap-8 items-center">
+            <div className="md:w-1/2">
+              <Image 
+                src={pool} 
+                alt="Inno Towers Right View" 
+                className="rounded-lg shadow-lg"
+                width={600}
+                height={400}
+              />
+            </div>
+            <div className="md:w-1/2">
+              <h3 className={`${nunito_sans_bold.className} text-2xl mb-4`}>Secure Parking Area</h3>
+              <p className={`${eb_garamond400.className} text-lg`}>
+                Your {`vehicle's`} security is our priority. Our spacious parking area features 
+                24/7 surveillance, well-lit spaces, and easy access to your residence. 
+                Additional visitor parking is also available for your guests.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mb-16">
+          <div className="flex flex-col md:flex-row gap-8 items-center">
+            <div className="md:w-1/2">
+              <h3 className={`${nunito_sans_bold.className} text-2xl mb-4`}>Premium Utilities</h3>
+              <p className={`${eb_garamond400.className} text-lg`}>
+                Experience uninterrupted comfort with our state-of-the-art utility systems. 
+                Features include backup power supply, high-speed internet, and modern 
+                security systems ensuring your home runs smoothly 24/7.
+              </p>
+            </div>
+            <div className="md:w-1/2">
+              <Image 
+                src={left} 
+                alt="Aerial View of Inno Towers" 
+                className="rounded-lg shadow-lg"
+                width={600}
+                height={400}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-gray-50 py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className={`${eb_garamond.className} text-3xl md:text-4xl text-center mb-12`}>
+            Additional Services
+          </h2>
+          <Services />
+        </div>
+      </div>
+
+      <div className="my-16 px-4 md:px-8">
+        <h2 className={`${eb_garamond.className} text-3xl md:text-4xl text-center mb-12`}>
+          Prime Location
+        </h2>
+        <div className={`${eb_garamond400.className} text-lg max-w-4xl mx-auto text-center`}>
+          <p className="mb-6">
+            Inno Towers is strategically located in the serene and secure environs of Burma Hills, 
+            offering the perfect balance of tranquility and accessibility.
+          </p>
+          <p>
+            Enjoy proximity to major shopping centers, restaurants, healthcare facilities, and 
+            educational institutions. The Burma Camp Military post ensures enhanced security, 
+            while the central business district and Kotoka International Airport are just minutes away.
           </p>
         </div>
       </div>
-      <Services />
-      <div className="my-8">
-        <p
-          className={`${eb_garamond.className} text-[1.58rem] md:text-4xl text-center`}
-        >
-          A Superior Locale
-        </p>
-        <div
-          className={`${eb_garamond400.className} text-[1.2rem] flex flex-col pl-0 md:pl-6 gap-16 md:flex-row mt-8 mb-11 mx-[1.2rem] md:mx-[6rem]`}
-        >
-          <div className="flex flex-col gap-3 w-auto md:w-[36rem]">
-            <p>
-              Inno Towers is strategically located in the serene and secure
-              environs of Burma Hills, a classy residential community of
-              affluent individuals, beautiful houses and well demarcated road
-              layouts.
-            </p>
-            <Image src={aerial} alt="aerial view of Tse Addo" />
-          </div>
-          <div className="w-auto md:w-[36rem]">
-            <p className="mb-8">
-              We assure our residents that Inno Towers is situated in one of the
-              most secure places in Accra, as it is in close proximity to the
-              Burma Camp Military post of the Ghana Armed Forces. Residents
-              would benefit from well installed security measures and regular
-              police patrols. The quality of roads, proximity to renowned malls,
-              the Kotoka International Airport, and the central business
-              district makes it most preferred.
-            </p>
-            <p>
-              Along the main roads, residents have access to a range of
-              amenities such as bars, restaurants, grocery stores, pharmacies,
-              clothing boutiques, and beauty shops. The neighborhood also offers
-              excellent educational institutions, healthcare facilities,
-              churches, banks, and even a university, Zenith College.
-            </p>
-          </div>
-        </div>
-      </div>
+
       <Footer />
     </section>
   );

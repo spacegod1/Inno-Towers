@@ -21,16 +21,6 @@ export default function Services() {
         </div>
       </div>
       <div className="w-[25rem]">
-        <FaCar size={27} className="text-[#bc9142]" />
-        <h3 className="text-[1.3rem] font-medium mb-2">
-          Wide-Area Parking Space
-        </h3>
-      </div>
-      <div className="w-[25rem]">
-        <LiaSwimmingPoolSolid size={30} className="text-[#bc9142]" />
-        <h3 className="text-[1.3rem] font-medium mb-2">Swimming Pool</h3>
-      </div>
-      <div className="w-[25rem]">
         <MdSecurity size={27} className="text-[#bc9142] mb-1" />
         <h3 className="text-[1.3rem] font-medium mb-2">24/7 Security & CCTV</h3>
       </div>
