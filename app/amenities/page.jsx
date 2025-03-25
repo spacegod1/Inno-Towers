@@ -189,11 +189,11 @@ export default function Amenities() {
             <div className="md:w-1/2">
               <h3 className={`${nunito_sans_bold.className} text-2xl mb-4`}>Concierge & Laundry Services</h3>
               <p className={`${eb_garamond400.className} text-lg`}>
-                Experience hotel-like convenience with our dedicated concierge team available to assist with your daily needs. 
+                Experience convenience with our dedicated concierge team available to assist with your daily needs. 
                 Our professional staff can help with package delivery, maintenance requests, and special arrangements.
               </p>
               <p className={`${eb_garamond400.className} text-lg mt-2`}>
-                Take advantage of our premium onsite laundry services, offering professional cleaning and garment care. 
+                We also encourage our residents to take advantage of our onsite laundry services, offering professional cleaning and garment care. 
                 Save time and enjoy perfectly laundered clothing without leaving the comfort of your home.
               </p>
             </div>
