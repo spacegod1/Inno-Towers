@@ -37,7 +37,7 @@ export default function SingleRoom() {
 
         {/* Price and Availability Card */}
         <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-gray-100">
-          <h1 className={`${play.className} text-3xl mb-2`}>FROM $59,000 **</h1>
+          <h1 className={`${play.className} text-3xl mb-2`}>FROM $69,000 **</h1>
           <span className="inline-block px-4 py-1 bg-gray-100 rounded-full text-sm">
             3 available units
           </span>

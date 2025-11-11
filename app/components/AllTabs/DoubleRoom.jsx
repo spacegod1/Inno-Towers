@@ -132,14 +132,14 @@ export default function DoubleRoom() {
         {/* Price and Availability Cards */}
         <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-gray-100">
             <h2 className="text-lg mb-2">Cozy Urban Suite</h2>
-            <h1 className={`${play.className} text-3xl mb-2`}>FROM $149,000 **</h1>
+            <h1 className={`${play.className} text-3xl mb-2`}>FROM $159,000 **</h1>
             <span className="inline-block px-4 py-1 bg-gray-100 rounded-full text-sm">
               3 available units
             </span>
           </div>
           <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-gray-100">
             <h2 className="text-lg mb-2">Executive Suite</h2>
-            <h1 className={`${play.className} text-3xl mb-2`}>FROM $179,000 **</h1>
+            <h1 className={`${play.className} text-3xl mb-2`}>FROM $189,000 **</h1>
             <span className="inline-block px-4 py-1 bg-gray-100 rounded-full text-sm">
               4 available units
             </span>
@@ -147,7 +147,7 @@ export default function DoubleRoom() {
           <div className="flex justify-center gap-6 flex-wrap">
           <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-gray-100">
             <h2 className="text-lg mb-2">Premium Family Layout</h2>
-            <h1 className={`${play.className} text-3xl mb-2`}>FROM $189,000 **</h1>
+            <h1 className={`${play.className} text-3xl mb-2`}>FROM $199,000 **</h1>
             <span className="inline-block px-4 py-1 bg-gray-100 rounded-full text-sm">
               4 available units
             </span>
