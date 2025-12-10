@@ -1,6 +1,4 @@
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"], display: "swap" });
+import { inter } from "../styles/fonts";
 
 export default function ContactForm() {
   return (

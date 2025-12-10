@@ -1,19 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { Montserrat } from "next/font/google";
 import logo from "../../public/InnoLogo-white.svg";
 import logoBlack from "../../public/InnoLogo.svg";
 import Link from "next/link";
-import { TfiClose } from "react-icons/tfi";
-import { CgMenuGridO } from "react-icons/cg";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: "400",
-});
+import { poiretOne } from "../styles/fonts";
+import { Squeeze as Hamburger } from 'hamburger-react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,6 +31,11 @@ export default function Navbar() {
     };
 
     window.addEventListener("scroll", changeNavBackground);
+    
+    // Cleanup function to remove event listener
+    return () => {
+      window.removeEventListener("scroll", changeNavBackground);
+    };
   }, []);
 
   const handleIsOpen = () => {
@@ -63,14 +62,19 @@ export default function Navbar() {
       </div>
 
       <ul
-        className={`hidden gap-7 uppercase mx-3 ${montserrat.className} tracking-wider md:flex `}
+        className={`hidden gap-7 uppercase mx-3 ${poiretOne.className} tracking-wider font-semibold md:flex `}
       >
         {links.map((link) => {
+          const isActive = pathName === link.href;
+          const activeColorClass = isScrolled && pathName !== "/" 
+            ? "text-white" 
+            : "text-[#bc9142]";
+          
           return (
             <Link key={link.href} href={link.href} prefetch>
               <li
-                className={`${
-                  pathName === link.href && "underline underline-offset-2"
+                className={`transition-colors duration-300 ${
+                  isActive ? activeColorClass : "hover:text-[#bc9142]"
                 }`}
               >
                 {link.label}
@@ -79,12 +83,14 @@ export default function Navbar() {
           );
         })}
       </ul>
-      <div onClick={handleIsOpen} className="block md:hidden">
-        {isOpen ? (
-          <TfiClose size={25} className="font-bold" />
-        ) : (
-          <CgMenuGridO size={40} className="font-bold" />
-        )}
+      <div className="block md:hidden">
+        <Hamburger 
+          toggled={isOpen} 
+          toggle={setIsOpen}
+          size={24}
+          duration={0.4}
+          color="currentColor"
+        />
       </div>
       <div
         className={
@@ -94,12 +100,21 @@ export default function Navbar() {
         }
       >
         <ul
-          className={`flex flex-col gap-7 mt-[15rem] ml-11 text-white uppercase ${montserrat.className}`}
+          className={`flex flex-col gap-7 mt-[15rem] ml-11 uppercase font-medium ${poiretOne.className}`}
         >
           {links.map((link) => {
+            const isActive = pathName === link.href;
+            
             return (
               <Link key={link.href} href={link.href} prefetch>
-                <li onClick={handleIsOpen}>{link.label}</li>
+                <li 
+                  onClick={handleIsOpen}
+                  className={`transition-colors duration-300 ${
+                    isActive ? "text-[#bc9142]" : "text-white hover:text-[#bc9142]"
+                  }`}
+                >
+                  {link.label}
+                </li>
               </Link>
             );
           })}

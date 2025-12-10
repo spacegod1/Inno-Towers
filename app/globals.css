@@ -2,11 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Google Fonts CSS Classes */
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-abril {
+  font-family: 'Abril Fatface', serif;
+}
+
+.font-nunito {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 300;
+}
+
+.font-nunito-bold {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 800;
+}
+
+.font-eb-garamond {
+  font-family: 'EB Garamond', serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.font-eb-garamond-400 {
+  font-family: 'EB Garamond', serif;
+  font-weight: 400;
+}
+
+.font-fraunces {
+  font-family: 'Fraunces', serif;
+}
+
+.font-fraunces-light {
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+}
+
+.font-fraunces-medium {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+}
+
+.font-fraunces-semibold {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+}
+
+.font-fraunces-bold {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+}
+
+.font-poiret {
+  font-family: 'Poiret One', sans-serif;
+}
+
+.font-fraunces-900 {
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+}
+
+.font-fraunces-900-italic {
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.font-niconne {
+  font-family: 'Niconne', cursive;
+}
+
 .active {
   background-color: #bc9142;
   position: sticky;
-  transition: ease-in-out;
-  transition-duration: 300;
+  transition: all 300ms ease-in-out;
 }
 
 .background {

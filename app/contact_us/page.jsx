@@ -1,6 +1,6 @@
 import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
-import { eb_garamond, eb_garamond400, nunito_sans } from "../styles/fonts";
+import { eb_garamond, frauncesLight } from "../styles/fonts";
 import { CiMobile3, CiLocationArrow1 } from "react-icons/ci";
 import { AiOutlineMail } from "react-icons/ai";
 
@@ -14,11 +14,11 @@ export default function Contact() {
           >
             Always Ready to Assist You
           </h2>
-          <p className={`${eb_garamond400.className} text-[1.2rem] mt-5`}>
+          <p className={`${frauncesLight.className} text-[1.2rem] mt-5`}>
             Whether you want a property viewing session or just want general
             information, our sales representatives are happy to assist you.
           </p>
-          <p className={`${eb_garamond400.className} text-[1.2rem] mt-4`}>
+          <p className={`${frauncesLight.className} text-[1.2rem] mt-4`}>
             We have very attractive discount offers open to early buyers who
             wish to secure apartment units before our full completion. Visit our
             social pages for more information.
@@ -29,7 +29,7 @@ export default function Contact() {
         </div>
       </div>
       <div
-        className={`flex flex-col items-center gap-3 justify-center mt-[20rem] md:mt-[8.5rem] md:flex-row relative z-20 ${nunito_sans.className}`}
+        className={`flex flex-col items-center gap-3 justify-center mt-[20rem] md:mt-[8.5rem] md:flex-row relative z-20 ${frauncesLight.className}`}
       >
         <CiLocationArrow1 size={20} className="text-[#bc9142] ml-0 md:ml-3" />
         <p>Wilshire K. Rd, Burma Camp</p> {"   "}

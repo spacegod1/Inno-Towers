@@ -1,22 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { Montserrat } from "next/font/google";
-import { Abril_Fatface } from "next/font/google";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: "400",
-  display: "swap",
-});
-
-const abril_fatface = Abril_Fatface({
-  subsets: ["latin"],
-  weight: "400",
-  display: "swap",
-});
+import { fraunces900, poiretOne } from "./styles/fonts";
 
 // Array of background images
 const backgroundImages = [
@@ -75,11 +62,11 @@ export default function Home() {
         {/* Content */}
         <section className="text-white text-center absolute top-[55%] left-0 gap-4 flex flex-col justify-center items-center md:left-[7%] lg:left-[14%] z-10">
           <h2
-            className={`text-3xl lg:text-6xl font-black ${abril_fatface.className}`}
+            className={`text-3xl lg:text-6xl ${fraunces900.className}`}
           >
             Experience Luxury Like Never Before
           </h2>
-          <p className={`px-2 ${montserrat.className}`}>
+          <p className={`px-2 text-lg ${poiretOne.className}`}>
             We want to make it possible for more people to own their dream
             apartments in the heart of Tse Addo.
           </p>

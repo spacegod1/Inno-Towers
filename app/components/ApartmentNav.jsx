@@ -1,21 +1,10 @@
 "use client";
 
-import { Nunito_Sans } from "next/font/google";
 import { useState } from "react";
 import SingleRoom from "./AllTabs/SingleRoom";
 import DoubleRoom from "./AllTabs/DoubleRoom";
 import PentHouse from "./AllTabs/PentHouse";
-
-const nunito_sans8 = Nunito_Sans({
-  subsets: ["latin"],
-  weight: "800",
-  display: "swap",
-});
-const nunito_sans = Nunito_Sans({
-  subsets: ["latin"],
-  weight: "300",
-  display: "swap",
-});
+import { nunitoSansBold, frauncesLight } from "../styles/fonts";
 
 export default function ApartmentNav() {
   const list = [
@@ -38,7 +27,7 @@ export default function ApartmentNav() {
         {/* Tab Component UI for Mobile screens */}
 
         <ul
-          className={`flex md:hidden justify-center items-center gap-8 mx-4 mt-6 ${nunito_sans8.className}`}
+          className={`flex md:hidden justify-center items-center gap-8 mx-4 mt-6 ${nunitoSansBold.className}`}
           suppressHydrationWarning
         >
           {listMobile.map((item) => {
@@ -59,7 +48,7 @@ export default function ApartmentNav() {
         {/* Tab Component UI for Medium and large screens */}
 
         <ul
-          className={`hidden md:flex md:mx-auto justify-center items-center gap-16 mt-9 ${nunito_sans8.className}`}
+          className={`hidden md:flex md:mx-auto justify-center items-center gap-16 mt-9 ${nunitoSansBold.className}`}
         >
           {list.map((item) => {
             return (
@@ -77,7 +66,7 @@ export default function ApartmentNav() {
         </ul>
       </nav>
       <div
-        className={`outlet p-2 mt-5 md:p-6 md:mx-10 ${nunito_sans.className}`}
+        className={`outlet p-2 mt-5 md:p-6 md:mx-10 ${frauncesLight.className}`}
       >
         {activeTab === "tab1" && <SingleRoom />}
         {activeTab === "tab2" && <DoubleRoom />}

@@ -9,9 +9,8 @@ import front from "../../public/Inno_Towers_Front.png";
 import Image from "next/image";
 import Footer from "../components/Footer";
 import {
-  eb_garamond400,
+  frauncesLight,
   eb_garamond,
-  nunito_sans,
   nunito_sans_bold,
 } from "../styles/fonts";
 import { useState, useEffect } from "react";
@@ -80,7 +79,7 @@ export default function Amenities() {
                   <h3 className={`${eb_garamond.className} text-white text-xl md:text-2xl`}>
                     {slide.title}
                   </h3>
-                  <p className={`${nunito_sans.className} text-white/90 mt-2 font-light`}>
+                  <p className={`${frauncesLight.className} text-white/90 mt-2 font-light`}>
                     {slide.description}
                   </p>
                 </div>
@@ -113,7 +112,7 @@ export default function Amenities() {
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <div className="md:w-1/2">
               <h3 className={`${nunito_sans_bold.className} text-2xl mb-4`}>Infinity Swimming Pool</h3>
-              <p className={`${eb_garamond400.className} text-lg`}>
+              <p className={`${frauncesLight.className} text-lg`}>
                 Dive into luxury with our stunning infinity pool overlooking the cityscape. 
                 Perfect for morning laps or evening relaxation, our pool area is designed 
                 to provide a resort-like experience right at home.
@@ -144,7 +143,7 @@ export default function Amenities() {
             </div>
             <div className="md:w-1/2">
               <h3 className={`${nunito_sans_bold.className} text-2xl mb-4`}>Secure Parking Area</h3>
-              <p className={`${eb_garamond400.className} text-lg`}>
+              <p className={`${frauncesLight.className} text-lg`}>
                 Your {`vehicle's`} security is our priority. Our spacious parking area features 
                 24/7 surveillance, well-lit spaces, and easy access to your residence. 
                 Additional visitor parking is also available for your guests.
@@ -157,7 +156,7 @@ export default function Amenities() {
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <div className="md:w-1/2">
               <h3 className={`${nunito_sans_bold.className} text-2xl mb-4`}>Premium Utilities</h3>
-              <p className={`${eb_garamond400.className} text-lg`}>
+              <p className={`${frauncesLight.className} text-lg`}>
                 Experience uninterrupted comfort with our state-of-the-art utility systems. 
                 Features include backup power supply, high-speed internet, and modern 
                 security systems ensuring your home runs smoothly 24/7.
@@ -188,11 +187,11 @@ export default function Amenities() {
             </div>
             <div className="md:w-1/2">
               <h3 className={`${nunito_sans_bold.className} text-2xl mb-4`}>Concierge & Laundry Services</h3>
-              <p className={`${eb_garamond400.className} text-lg`}>
+              <p className={`${frauncesLight.className} text-lg`}>
                 Experience convenience with our dedicated concierge team available to assist with your daily needs. 
                 Our professional staff can help with package delivery, maintenance requests, and special arrangements.
               </p>
-              <p className={`${eb_garamond400.className} text-lg mt-2`}>
+              <p className={`${frauncesLight.className} text-lg mt-2`}>
                 We also encourage our residents to take advantage of our onsite laundry services, offering professional cleaning and garment care. 
                 Save time and enjoy perfectly laundered clothing without leaving the comfort of your home.
               </p>
@@ -213,7 +212,7 @@ export default function Amenities() {
         <h2 className={`${eb_garamond.className} text-3xl md:text-4xl text-center mb-12`}>
           Prime Location
         </h2>
-        <div className={`${eb_garamond400.className} text-lg max-w-4xl mx-auto text-center`}>
+        <div className={`${frauncesLight.className} text-lg max-w-4xl mx-auto text-center`}>
           <p className="mb-6">
             Inno Towers is strategically located in the serene and secure environs of Burma Hills, 
             offering the perfect balance of tranquility and accessibility.

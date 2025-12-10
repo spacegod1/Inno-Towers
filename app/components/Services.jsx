@@ -6,6 +6,7 @@ import { MdSecurity, MdOutlineElectricalServices } from "react-icons/md";
 import { GiLift } from "react-icons/gi";
 import { ImConnection } from "react-icons/im";
 import { Cinzel } from "next/font/google";
+import { frauncesLight } from "@/app/styles/fonts";
 
 const cinzel = Cinzel({ subsets: ["latin"], weight: "400", display: "swap" });
 
@@ -21,7 +22,7 @@ export default function Services() {
           <h3 className={`${cinzel.className} text-xl font-medium mb-3 text-gray-800`}>
             High Speed Wifi
           </h3>
-          <p className="text-gray-600 text-sm">
+          <p className={`${frauncesLight.className} text-gray-600 text-sm`}>
             Stay connected with our high-speed fiber optic internet
           </p>
         </div>
@@ -36,7 +37,7 @@ export default function Services() {
           <h3 className={`${cinzel.className} text-xl font-medium mb-3 text-gray-800`}>
             24/7 Security & CCTV
           </h3>
-          <p className="text-gray-600 text-sm">
+          <p className={`${frauncesLight.className} text-gray-600 text-sm`}>
             Round-the-clock security with advanced surveillance systems
           </p>
         </div>
@@ -51,7 +52,7 @@ export default function Services() {
           <h3 className={`${cinzel.className} text-xl font-medium mb-3 text-gray-800`}>
             Backup Utilities
           </h3>
-          <p className="text-gray-600 text-sm">
+          <p className={`${frauncesLight.className} text-gray-600 text-sm`}>
             Uninterrupted power supply with backup generators
           </p>
         </div>
@@ -66,7 +67,7 @@ export default function Services() {
           <h3 className={`${cinzel.className} text-xl font-medium mb-3 text-gray-800`}>
             Modern Lifts
           </h3>
-          <p className="text-gray-600 text-sm">
+          <p className={`${frauncesLight.className} text-gray-600 text-sm`}>
             High-speed elevators for convenient access
           </p>
         </div>
