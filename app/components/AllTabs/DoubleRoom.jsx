@@ -15,6 +15,13 @@ const play = Play({ subsets: ["latin"], weight: "400", display: "swap" });
 export default function DoubleRoom() {
   const [expandedType, setExpandedType] = useState("A");
   const [isOverviewModalOpen, setIsOverviewModalOpen] = useState(false);
+  const [selectedFloorPlan, setSelectedFloorPlan] = useState(null);
+  const [isFloorPlanModalOpen, setIsFloorPlanModalOpen] = useState(false);
+
+  const openFloorPlanModal = (imageSrc) => {
+    setSelectedFloorPlan(imageSrc);
+    setIsFloorPlanModalOpen(true);
+  };
 
   const apartments = [
     {
@@ -149,14 +156,20 @@ export default function DoubleRoom() {
                 >
                   <div className="px-6 pb-6 border-t border-gray-100">
                     {/* Floor Plan Image */}
-                    <div className="mt-6 mb-6 rounded-xl overflow-hidden bg-gray-50">
+                    <div 
+                      className="mt-6 mb-6 rounded-xl overflow-hidden bg-gray-50 cursor-pointer group relative"
+                      onClick={() => openFloorPlanModal(apt.image.src)}
+                    >
                       <Image
                         src={apt.image}
                         alt={`${apt.title} Floor Plan`}
                         width={800}
                         height={600}
-                        className="w-full h-auto object-contain"
+                        className="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-105"
                       />
+                      <div className="absolute bottom-2 right-2 bg-black/70 text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                        Click to zoom
+                      </div>
                     </div>
 
                     {/* Description */}
@@ -202,6 +215,14 @@ export default function DoubleRoom() {
         onClose={() => setIsOverviewModalOpen(false)}
         imageSrc={twobedroom.src}
         alt="Full Floor Layout Overview"
+      />
+
+      {/* Floor Plan Modal */}
+      <ImageModal
+        isOpen={isFloorPlanModalOpen}
+        onClose={() => setIsFloorPlanModalOpen(false)}
+        imageSrc={selectedFloorPlan}
+        alt="Apartment Floor Plan"
       />
     </div>
   );

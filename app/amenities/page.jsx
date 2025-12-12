@@ -12,6 +12,8 @@ import {
   frauncesLight,
   eb_garamond,
   nunito_sans_bold,
+  poiretOne,
+  fraunces
 } from "../styles/fonts";
 import { useState, useEffect } from "react";
 import Tse from "../../public/Tse.jpg";
@@ -103,18 +105,18 @@ export default function Amenities() {
         </div>
       </div>
       
-      <div className="mt-12 md:mt-20 px-4 md:px-8">
-        <h2 className={`${eb_garamond.className} text-3xl md:text-4xl text-center mb-12`}>
-          We Offer the Best Amenities
+      <div className="mt-12 md:mt-14 px-4 md:px-8">
+        <h2 className={`${poiretOne.className} text-3xl md:text-4xl text-center mb-12`}>
+          WE OFFER THE BEST AMENITIES
         </h2>
         
         <div className="mb-16">
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <div className="md:w-1/2">
-              <h3 className={`${nunito_sans_bold.className} text-2xl mb-4`}>Infinity Swimming Pool</h3>
-              <p className={`${frauncesLight.className} text-lg`}>
-                Dive into luxury with our stunning infinity pool overlooking the cityscape. 
-                Perfect for morning laps or evening relaxation, our pool area is designed 
+              <h3 className={`${fraunces.className} text-2xl mb-4`}>Swimming Pool</h3>
+              <p className={`${frauncesLight.className} text-md`}>
+                Dive into luxury with our stunning infinity pool surrounded by lush landscaping. 
+                Perfect for morning laps or evening relaxation, our ground-level pool area is designed 
                 to provide a resort-like experience right at home.
               </p>
             </div>
@@ -142,7 +144,7 @@ export default function Amenities() {
               />
             </div>
             <div className="md:w-1/2">
-              <h3 className={`${nunito_sans_bold.className} text-2xl mb-4`}>Secure Parking Area</h3>
+              <h3 className={`${fraunces.className} text-2xl mb-4`}>Secure Parking Area</h3>
               <p className={`${frauncesLight.className} text-lg`}>
                 Your {`vehicle's`} security is our priority. Our spacious parking area features 
                 24/7 surveillance, well-lit spaces, and easy access to your residence. 
@@ -155,7 +157,7 @@ export default function Amenities() {
         <div className="mb-16">
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <div className="md:w-1/2">
-              <h3 className={`${nunito_sans_bold.className} text-2xl mb-4`}>Premium Utilities</h3>
+              <h3 className={`${fraunces.className} text-2xl mb-4`}>Premium Utilities</h3>
               <p className={`${frauncesLight.className} text-lg`}>
                 Experience uninterrupted comfort with our state-of-the-art utility systems. 
                 Features include backup power supply, high-speed internet, and modern 
@@ -186,7 +188,7 @@ export default function Amenities() {
               />
             </div>
             <div className="md:w-1/2">
-              <h3 className={`${nunito_sans_bold.className} text-2xl mb-4`}>Concierge & Laundry Services</h3>
+              <h3 className={`${fraunces.className} text-2xl mb-4`}>Concierge & Laundry Services</h3>
               <p className={`${frauncesLight.className} text-lg`}>
                 Experience convenience with our dedicated concierge team available to assist with your daily needs. 
                 Our professional staff can help with package delivery, maintenance requests, and special arrangements.
@@ -209,8 +211,8 @@ export default function Amenities() {
       </div> */}
 
       <div className="my-16 px-4 md:px-8">
-        <h2 className={`${eb_garamond.className} text-3xl md:text-4xl text-center mb-12`}>
-          Prime Location
+        <h2 className={`${poiretOne.className} text-3xl md:text-4xl text-center mb-12`}>
+          PRIME LOCATION
         </h2>
         <div className={`${frauncesLight.className} text-lg max-w-4xl mx-auto text-center`}>
           <p className="mb-6">

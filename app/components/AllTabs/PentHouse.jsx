@@ -52,7 +52,7 @@ export default function PentHouse() {
           >
             <Image
               src={pent1}
-              alt="4th Floor Plan"
+              alt="Main Area Floor Plan"
               width={700}
               height={500}
               className="w-full h-auto object-contain rounded-xl transition-transform duration-300 group-hover:scale-105"
@@ -94,7 +94,7 @@ export default function PentHouse() {
           >
             <Image
               src={pent2}
-              alt="5th Floor Plan"
+              alt="Top Floor Plan"
               width={700}
               height={500}
               className="w-full h-auto object-contain rounded-xl transition-transform duration-300 group-hover:scale-105"
