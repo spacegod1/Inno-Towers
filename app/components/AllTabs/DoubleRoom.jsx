@@ -32,6 +32,7 @@ export default function DoubleRoom() {
       bathrooms: 3,
       price: "$164,900",
       image: typeA,
+      availability: 1,
       description: "Perfect for modern professionals and small families. This thoughtfully designed layout maximizes space utilization with an open-concept living area that flows seamlessly into the dining space. Features include a master bedroom with en-suite bathroom, a second bedroom with dedicated bathroom, and ample storage throughout.",
       features: ["Open-concept living & dining", "Two en-suite bedrooms", "Modern kitchen with island", "Spacious balcony", "Built-in wardrobes", "Visitors' washroom"]
     },
@@ -43,6 +44,7 @@ export default function DoubleRoom() {
       bathrooms: 3,
       price: "$194,900",
       image: typeB,
+      availability: 1,
       description: "Designed with families in mind, this generous layout offers more living space and separation between living and sleeping areas. The expansive living room is perfect for entertaining, while the large master suite provides a private retreat. Enhanced storage solutions and a spacious balcony complete this premium offering.",
       features: ["Expansive living area", "Large master suite", "Separate dining area", "Premium finishes", "Extra storage spaces"]
     },
@@ -54,6 +56,7 @@ export default function DoubleRoom() {
       bathrooms: 3,
       price: "$220,500",
       image: typeC,
+      availability: 0,
       description: "The pinnacle of luxury two-bedroom living. This executive layout features generous proportions throughout, with a grand living area perfect for both relaxation and entertainment. The master bedroom resembles a private suite with walk-in closet and luxurious bathroom. High-end finishes and attention to detail make this the ultimate choice.",
       features: ["Grand living & entertainment area", "Master suite with walk-in closet", "Luxury bathrooms", "Premium kitchen appliances", "Large private terrace"]
     }
@@ -194,12 +197,21 @@ export default function DoubleRoom() {
 
                     {/* Availability Badge */}
                     <div className="pt-4 border-t border-gray-100">
-                      <span className="inline-flex items-center px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium">
-                        <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                        </svg>
-                        1 Unit Available
-                      </span>
+                      {apt.availability > 0 ? (
+                        <span className="inline-flex items-center px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium">
+                          <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                          </svg>
+                          {apt.availability} {apt.availability === 1 ? 'Unit' : 'Units'} Available
+                        </span>
+                      ) : (
+                        <span className="inline-flex items-center px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm font-medium">
+                          <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clipRule="evenodd" />
+                          </svg>
+                          No units available currently
+                        </span>
+                      )}
                     </div>
                   </div>
                 </div>
